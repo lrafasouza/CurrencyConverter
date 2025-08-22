@@ -45,7 +45,7 @@ Um conversor de moedas moderno e elegante construído com Angular, oferecendo co
 
 1. **Clone o repositório**
    ```bash
-   git clone https://github.com/seu-usuario/currency-converter.git
+   git clone https://github.com/lrafasouza/CurrencyConverter.git
    cd currency-converter
    ```
 
