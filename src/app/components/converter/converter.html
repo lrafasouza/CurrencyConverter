@@ -1,0 +1,56 @@
+<div class="converter">
+  <input type="number" class="amount-input" placeholder="Digite o valor" min="0" [(ngModel)]="amount" />
+
+  <div class="currency-row">
+    <div class="currency-select">
+      <div class="select-trigger" (click)="toggleFromDropdown()">
+        <img [src]="getCurrencyFlag(this.fromCurrency)" [alt]="this.fromCurrency" />
+        <span>{{ this.fromCurrency }}</span>
+        <img src="icons/arrow.svg" [class.open]="this.isFromDropdownOpen" alt="">
+      </div>
+      <div class="select-options" [class.open]="this.isFromDropdownOpen" (mouseleave)="this.isFromDropdownOpen = false">
+        @for (currency of this.currencies; track $index) {
+        <div class="option" (click)="selectFromCurrency(currency.code)">
+          <img [src]="getCurrencyFlag(currency.code)" [alt]="currency.code" />
+          <span>{{ currency.code }}</span>
+        </div>
+        }
+      </div>
+    </div>
+
+    <button class="swap-btn" (click)="swap()">
+      <img src="icons/swap.svg" alt="Swap" />
+    </button>
+
+    <div class="currency-select">
+      <div class="select-trigger" (click)="toggleToDropdown()">
+        <img [src]="getCurrencyFlag(this.toCurrency)" [alt]="this.toCurrency" />
+        <span>{{ this.toCurrency }}</span>
+        <img src="icons/arrow.svg" [class.open]="this.isToDropdownOpen" alt="">
+      </div>
+      <div class="select-options" [class.open]="this.isToDropdownOpen" (mouseleave)="this.isToDropdownOpen = false">
+        @for (currency of currencies; track $index) {
+        <div class="option" (click)="selectToCurrency(currency.code)">
+          <img [src]="getCurrencyFlag(currency.code)" [alt]="currency.code" />
+          <span>{{ currency.code }}</span>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class="exchange-rate">
+    <div class="view-rate">
+      @if (!this.amount || this.amount <= 0) { <p>Digite um valor para converter </p> } @else { {{ this.amount }} {{
+        this.fromCurrency }} = {{ this.result | number:'1.2-3' }} {{ this.toCurrency}} } </div>
+  </div>
+
+
+  <button class="convert-btn" (click)="convert()">
+    @if (this.isLoading) {
+    Convertendo...
+    } @else {
+    Converter
+    }
+  </button>
+</div>

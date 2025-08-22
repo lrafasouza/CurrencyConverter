@@ -1,59 +1,129 @@
-# CurrencyConverter
+# 💱 Currency Converter
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
+Um conversor de moedas moderno e elegante construído com Angular, oferecendo conversões em tempo real com uma interface minimalista e responsiva.
 
-## Development server
+## 🌟 Características
 
-To start a local development server, run:
+- **Design Glass Morphism** - Interface moderna com efeitos de vidro translúcido
+- **Conversão Manual** - Controle total sobre quando realizar as conversões
+- **Selects Customizados** - Dropdowns elegantes com bandeiras dos países
+- **Responsivo** - Adapta-se perfeitamente a diferentes tamanhos de tela
+- **Animações Suaves** - Transições fluidas e feedback visual intuitivo
+- **Interface Minimalista** - Foco na usabilidade e experiência do usuário
 
-```bash
-ng serve
+## 🚀 Funcionalidades
+
+### ✨ Interface Interativa
+- Input minimalista para valores monetários
+- Selects customizados com bandeiras dos países
+- Botão de swap animado com rotação de 180°
+- Feedback visual em tempo real
+
+
+### 📱 Design Responsivo
+- Layout adaptativo para desktop, tablet e mobile
+- Componentes que se ajustam automaticamente
+- Experiência otimizada em todos os dispositivos
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Angular 18+** - Framework principal
+- **TypeScript** - Linguagem de programação
+- **CSS3** - Estilização avançada com Glass Morphism
+- **HTML5** - Estrutura semântica
+- **RxJS** - Programação reativa
+- **Unirate API** - API de conversão de moedas (https://api.unirateapi.com/)
+
+## 📦 Instalação
+
+### Pré-requisitos
+- Node.js (versão 18 ou superior)
+- npm ou yarn
+- Angular CLI
+
+### Passos para Instalação
+
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/seu-usuario/currency-converter.git
+   cd currency-converter
+   ```
+
+2. **Instale as dependências**
+   ```bash
+   npm install
+   ```
+
+3. **Execute o projeto**
+   ```bash
+   ng serve
+   ```
+
+4. **Abra no navegador**
+   ```
+   http://localhost:4200
+   ```
+
+## 🎨 Screenshots
+
+### Desktop
+*Interface principal em desktop com design glass morphism*
+
+### Mobile
+*Layout responsivo otimizado para dispositivos móveis*
+
+## 🏗️ Estrutura do Projeto
+
+```
+src/
+├── app/
+│   ├── components/
+│   │   └── converter/
+│   │       ├── converter.html      # Template do componente
+│   │       ├── converter.css       # Estilos do conversor
+│   │       └── converter.ts        # Lógica do componente
+│   ├── models/
+│   │   └── currency.model.ts       # Modelo de dados das moedas
+│   ├── services/
+│   │   └── currency-service.ts     # Serviço de conversão
+│   ├── app.component.*             # Componente principal
+│   └── app.config.ts               # Configuração da aplicação
+└── styles.css                      # Estilos globais
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🎯 Como Usar
 
-## Code scaffolding
+1. **Digite o valor** que deseja converter no campo de entrada
+2. **Selecione a moeda de origem** clicando no primeiro dropdown
+3. **Selecione a moeda de destino** clicando no segundo dropdown
+4. **Use o botão swap** para trocar as moedas rapidamente
+5. **Clique em "Converter"** para obter o resultado
+6. **Visualize o resultado** na seção de taxa de câmbio
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🔧 Funcionalidades Técnicas
 
-```bash
-ng generate component component-name
-```
+### Componentes Principais
+- **ConverterComponent** - Componente principal do conversor
+- **CurrencyService** - Serviço para chamadas de API de conversão
+- **Currency Model** - Interface para tipagem das moedas
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### API Externa
+- **Unirate API** (https://api.unirateapi.com/)
+  - Conversão de moedas em tempo real
+  - Lista de moedas disponíveis
+  - Taxas de câmbio atualizadas
 
-```bash
-ng generate --help
-```
+### Estados da Interface
+- **Loading** - Indicador visual durante conversão
+- **Empty State** - Mensagem quando não há valor inserido
+- **Error Handling** - Tratamento de erros de conversão
+- **Success State** - Exibição do resultado da conversão
 
-## Building
+## 📈 Melhorias Futuras
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [ ] Adicionar mais moedas suportadas
+- [ ] Implementar histórico de conversões
+- [ ] Adicionar gráficos de variação cambial
+- [ ] Modo escuro/claro
+- [ ] Conversão offline com cache
+- [ ] PWA (Progressive Web App)
