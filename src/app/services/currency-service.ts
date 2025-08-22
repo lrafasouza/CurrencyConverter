@@ -68,7 +68,7 @@ export class CurrencyService {
     { code: 'AUD', name: 'Australian Dollar', flag: 'https://flagcdn.com/w640/au.png' },
     { code: 'CHF', name: 'Swiss Franc', flag: 'https://flagcdn.com/w640/ch.png' },
     { code: 'CNY', name: 'Chinese Yuan', flag: 'https://flagcdn.com/w640/cn.png' },
-    { code: 'INR', name: 'Indian Rupee', flag: 'https://flagcdn.com/w640/in.png' }
+    { code: 'INR', name: 'Indian Rupee', flag: 'https://flagcdn.com/w640/in.png' },
   ];
 
   // Verifica se as moedas estão disponíveis na API
